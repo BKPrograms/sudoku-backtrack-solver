@@ -9,7 +9,7 @@ def pattern(base, side, r, c): return (base * (r % base) + r // base + c) % side
 def shuffle(s): return sample(s, len(s))
 
 
-def give_board(base):
+def give_board(base): # Generates a base x base sudoku board, with 30% empty squares (this can be changed in the integer division on line 22)
     side = base * base
     rBase = range(base)
     rows = [g * base + r for g in shuffle(rBase) for r in shuffle(rBase)]
